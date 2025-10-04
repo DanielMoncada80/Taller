@@ -227,10 +227,10 @@ opacity:0; transition:opacity .6s ease;
 
 
 /* — Móvil/Phablet (481–768px) — */
-@media (min-width: 360px) and (max-width: 768px){
+@media (min-width: 360px) and (max-width: 950px){
 
 .container{ width: 98%; }
-  .nav-links{ gap:8px; font-size:18px; margin: 20px;}
+  .nav-links{ gap:25px; font-size:18px; margin: 20px;}
   .nav .orlux{font-size: 1px;}
   .carousel{ aspect-ratio: 5/3; margin-top:20px; margin: 0 auto; }
   .brand img {
@@ -275,17 +275,30 @@ opacity:0; transition:opacity .6s ease;
   }
 
   .card-wrapper{
-    max-width: 100%;
-    height: 260px;
-  }
-
-  .product-img{ height: 218px; }
-
-  .footer{ font-size: 11px;}
+  width:100%;
+  max-width:240px;           /* límite amigable por tarjeta */
+  height: 240px;;              /* alto base */
+  margin:0 auto;
+  perspective: 1000px;
 }
 
+  .product-img{ height: 100%; }
+
+  .footer{ font-size: 11px;}
+
+
+.card-flip {
+  transition: transform 1.1s;
+  transform-style: preserve-3d;
+  transform: rotateY(0deg); /* posición normal */
+}
+
+.card-flip.flipped {
+  transform: rotateY(180deg); /* giro */
+}
+}
 /* — Tablet / Laptop chico (769–1199px) — */
-@media (min-width:769px) and (max-width:1199px){
+@media (min-width:950px) and (max-width:1199px){
 .container{ width: 98%; }
   .nav-links{ gap:8px; font-size:16px; }
   .nav .orlux{font-size: 1px;}
