@@ -62,11 +62,12 @@ async function api(url, opts = {}) {
 }
 
 // Activar giro de tarjetas con clic
+// Activar giro de tarjetas con clic
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.card-wrapper').forEach(wrapper => {
     wrapper.addEventListener('click', () => {
       const flip = wrapper.querySelector('.card-flip');
-      flip.classList.toggle('flipped'); // 👉 alterna entre normal y girada
+      flip.classList.toggle('flipped'); // 👉 alterna: normal ↔ girada
     });
   });
 });
