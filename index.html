@@ -11,34 +11,40 @@
 <body class="zoom-page">
   <nav>
     <div class="container navbar">
+      <!-- LOGO Y NOMBRE -->
       <a class="brand" href="index.html">
         <img src="assets/img/Logo.jpeg" alt="Logo" width="100" height="20" class="neon">
         <span>Taller Automotriz MD</span>
       </a>
-      <div class="nav-links">
+
+      <!-- BOTÓN HAMBURGUESA -->
+      <div class="menu-toggle" id="menu-toggle">
+        <span></span><span></span><span></span>
+      </div>
+
+      <!-- ENLACES -->
+      <div class="nav-links" id="nav-links">
         <a href="index.html">Inicio</a>
         <a href="productos.html">Servicios</a>
-        <a href="https://wa.me/573206583971?text=Gracias%20por%20comunicarte%20con%20Taller%20Automotriz%20MD,%20es%20un%20gusto%20saludarte.%20Dejanos%20saber%20en%20que%20podemos%20ayudarte%20?" 
-        target="_blank" class="social-icon whatsapp" title="WhatsApp">
-      <i class="fab fa-whatsapp"></i>
-    </a>
-
-      <a href="https://www.instagram.com/centro_automotrizmd" 
-        target="_blank" class="social-icon instagram" title="Instagram">
-        <i class="fab fa-instagram"></i>
-      </a>
+        <a href="https://wa.me/573206583971?text=Gracias%20por%20comunicarte%20con%20Taller%20Automotriz%20MD,%20es%20un%20gusto%20saludarte.%20Dejanos%20saber%20en%20que%20podemos%20ayudarte%20?"
+          target="_blank" class="social-icon whatsapp" title="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.instagram.com/centro_automotrizmd"
+          target="_blank" class="social-icon instagram" title="Instagram">
+          <i class="fab fa-instagram"></i>
+        </a>
       </div>
     </div>
-    
   </nav>
 
   <main class="container">
     <section class="hero">
       <div class="carousel" id="carousel">
-        <img src="assets/img/Arranque_carro.jpeg" class="slide active" alt="Banner 1" class="neon">
+        <img src="assets/img/Compra de repuesto.jpeg" class="slide active" alt="Banner 1" class="neon">
         <img src="assets/img/Cambio_aceite.jpeg" class="slide" alt="Banner 2">
-        <img src="assets/img/Publicidad1.jpeg" class="slide" alt="Banner 3">
-        <img src="assets/img/Vehiculo_ruido.jpeg" class="slide" alt="Banner 4">
+        <img src="assets/img/Revisión.jpeg" class="slide" alt="Banner 3">
+        <img src="assets/img/Frenos.jpeg" class="slide" alt="Banner 4">
         <img src="assets/img/Venta_llantas.jpeg" class="slide" alt="Banner 5">
         <div class="carousel-dots" id="carouselDots">
           <span class="dot"></span>
@@ -63,8 +69,51 @@
     <a href="https://wa.me/573206583971?text=Gracias%20por%20comunicarte%20con%20Taller%20Automotriz%20MD,%20es%20un%20gusto%20saludarte.%20Dejanos%20saber%20en%20que%20podemos%20ayudarte%20?" class="btn" target="_blank">
     <i id="wap" class="fab fa-whatsapp"></i> Escríbenos y reserva tú cita.<br>
     </a>
-    
+<section class="info-taller">
+  <h2 class="titulo-seccion">📍 Ubicación del Taller</h2>
+  <div class="divider"></div>
 
+  <div class="info-contenedor">
+    <!-- Texto -->
+    <div class="info-texto">
+      <div class="info-bloque">
+        <h3>Dirección</h3>
+        <p>Cra. 50A #58 58<br>La Candelaria<br>Medellín, La Candelaria, Antioquia</p>
+      </div>
+
+      <div class="info-bloque">
+        <h3>Contacto</h3>
+        <p>
+          Teléfono: <a href="https://wa.me/573053768250" target="_blank">+57 305 376 8250</a><br>
+          Email: <a href="mailto:info@taller-md.com">info@taller-md.com</a>
+        </p>
+      </div>
+
+      <div class="info-bloque">
+        <h3>Horario de Atención</h3>
+        <p>
+          Lunes a Viernes: <strong>8:00 AM – 6:00 PM</strong><br>
+          Sábados: <strong>9:00 AM – 2:00 PM</strong><br>
+          Domingos: <strong>Cerrado</strong>
+        </p>
+      </div>
+    </div>
+
+    <!-- Mapa -->
+    <div class="mapa-container">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.0520144747425!2d-75.5645057!3d6.256878599999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e4429bcec3df077%3A0xad2354f498693441!2sCENTRO%20AUTOMOTRIZ%20M.D%20SAS!5e0!3m2!1ses!2sco!4v1759796001749!5m2!1ses!2sco"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+
+  <a href="https://www.google.com/maps/dir/?api=1&destination=Cra%2050A%20%2358%2058%20Medellin%20Antioquia"
+    target="_blank"
+    class="btn-ver-mapa">Ver en Google Maps</a>
+</section>
   </section>
   </main>
 
@@ -74,5 +123,23 @@
 
   <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
   <script src="assets/js/app.js"></script>
+
+  <script>
+  const toggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('active');
+    navLinks.classList.toggle('show');
+  });
+
+  // Cierra el menú al hacer clic en un enlace
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('show');
+      toggle.classList.remove('active');
+    });
+  });
+</script>
 </body>
 </html>
