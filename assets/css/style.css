@@ -62,7 +62,7 @@ nav{
 }
 
 .btn{
-  background:rgb(35, 227, 5); color:white;
+  background:rgba(0, 255, 85, 0.4); color:white;
   padding:10px 16px; border-radius:999px; border:0;
   font-weight:600; cursor:pointer;
   box-shadow:0 0 0 0 rgba(59,240,255,0.0);
@@ -366,7 +366,7 @@ opacity:0; transition:opacity .6s ease;
 .container{ width: 98%; }
 .nav-links{ gap:12px; font-size:18px; margin: 20px;}
 .nav .orlux{font-size: 1px;}
-.carousel{ aspect-ratio: 5/3; margin-top:20px; margin: 0 auto; }
+.carousel{ aspect-ratio: 9/7; margin-top:20px; margin: 0 auto; }
 
 .brand img {
   width: 3rem;
@@ -380,6 +380,7 @@ opacity:0; transition:opacity .6s ease;
   gap: 10px;
   font-weight: 700;
   font-size: .8rem;
+  padding-left: 0.5rem;
 }
 
 .brand-panel {
@@ -447,7 +448,7 @@ opacity:0; transition:opacity .6s ease;
 .menu-toggle span {
   height: 3px;
   width: 100%;
-  background-color: #00ff66;
+  background-color: white;
   border-radius: 5px;
   transition: all 0.3s ease;
 }
@@ -478,7 +479,7 @@ opacity:0; transition:opacity .6s ease;
   gap: 12px;
   padding: 15px;
   z-index: 1000;
-  width: 180px;
+  width: 140px;
   text-align: right;
 }
 
@@ -489,7 +490,7 @@ opacity:0; transition:opacity .6s ease;
 
 /* Enlaces */
 .nav-links a {
-  color: #00ff66;
+  color: white;
   text-decoration: none;
   font-weight: bold;
   font-size: 1rem;
@@ -502,7 +503,7 @@ opacity:0; transition:opacity .6s ease;
 
 /* Íconos sociales */
 .social-icon {
-  font-size: 1.2rem;
+  font-size: 3rem;
   color: #00ff66;
 }
 
@@ -546,13 +547,12 @@ opacity:0; transition:opacity .6s ease;
 .mapa-container {
     margin-top: -32px;
 }
-.info-bloque h3{font-size: 1rem;}
+.info-bloque h3{font-size: 1rem; padding-left: 0.5rem;}
 .info-bloque p{font-size: 0.9rem;}
 
 .titulo-seccion {
   font-size: 1.2rem;
   color: white;
-  
   margin-bottom: 10px;
 }
 
