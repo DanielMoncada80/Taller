@@ -118,7 +118,7 @@
             <div class="card-wrapper">
         <div class="card-flip">
           <div class="card card-front">
-            <img class="product-img" src="assets/img/Revision" alt="" />
+            <img class="product-img" src="assets/img/Revision.jpeg" alt="" />
             <!--<h4 class="product-title">¿Tú Vehiculo tiene algun ruido extraño 💆🏼‍♀️🤦🏻‍♂️</h4> -->
           </div>
           <div class="card card-back">
@@ -413,5 +413,23 @@
 
   <script>document.getElementById('y').textContent=new Date().getFullYear();</script>
   <script src="assets/js/app.js"></script>
+
+    <script>
+  const toggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => {
+    toggle.classList.toggle('active');
+    navLinks.classList.toggle('show');
+  });
+
+  // Cierra el menú al hacer clic en un enlace
+  document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+      navLinks.classList.remove('show');
+      toggle.classList.remove('active');
+    });
+  });
+</script>
 </body>
 </html>
